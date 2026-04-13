@@ -312,6 +312,3 @@ Browser Window: Maximized
 - ✅ JSON data processing
 
 ---
-
-
-**Note:** This framework is designed to showcase professional QA automation practices and is suitable for enterprise-level test automation projects.
