@@ -1,0 +1,96 @@
+2026-02-24 10:14:26.408 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 10:14:26.697 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 10:15:31.382 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 10:15:31.630 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 10:16:35.325 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-24 10:16:35.524 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 10:16:35.713 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-24 10:16:35.766 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 10:17:08.242 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 10:17:08.376 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 10:17:11.514 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 10:17:17.680 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 10:17:17.800 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 10:17:21.923 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-24 10:17:23.571 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:13:31.844 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:13:32.084 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 14:13:32.084 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:13:56.570 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:14:27.808 [main] INFO  Common.Log4j - Step 3: Enter valid Email and Password
+2026-02-24 14:14:27.808 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:14:27.809 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-24 14:14:29.931 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:21:35.079 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:21:35.351 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 14:21:35.351 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:21:41.558 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:21:42.235 [main] INFO  Common.Log4j - Step 3: Enter valid Email and Password
+2026-02-24 14:21:42.236 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:21:42.236 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-24 14:21:44.752 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:23:21.807 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:23:22.503 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-24 14:23:22.504 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:23:27.604 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:23:28.399 [main] INFO  Common.Log4j - Step 3: Enter valid Email and Password
+2026-02-24 14:23:28.399 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:23:28.399 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-24 14:23:30.184 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:23:31.692 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:23:31.742 [main] INFO  Common.Log4j - TC02: Verify that user cannot login with blank 'Username' textbox
+2026-02-24 14:23:31.743 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:23:43.315 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:23:43.974 [main] INFO  Common.Log4j - Step 3: User doesn't type any words into 'Username' textbox but enter valid information into 'Password' textbox 
+2026-02-24 14:23:43.975 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:23:44.914 [main] INFO  Common.Log4j - VP: User can't login and message "There was a problem with your login and/or errors exist in your form. " appears.
+2026-02-24 14:23:44.986 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:23:46.172 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:23:46.209 [main] INFO  Common.Log4j - TC03: Verify that user cannot log into Railway with invalid password 
+2026-02-24 14:23:46.209 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:24:00.036 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:24:01.064 [main] INFO  Common.Log4j - Step 3: Enter valid Email and invalid Password
+2026-02-24 14:24:01.065 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:24:02.249 [main] INFO  Common.Log4j - VP: Error message "There was a problem with your login and/or errors exist in your form." is displayed
+2026-02-24 14:24:02.301 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:24:03.566 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:24:03.603 [main] INFO  Common.Log4j - TC04: Verify that system shows message when user enters wrong password many times
+2026-02-24 14:24:03.603 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:24:07.178 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:24:07.866 [main] INFO  Common.Log4j - Step 3: Enter valid information into 'Username' textbox except 'Password' textbox.
+2026-02-24 14:24:07.866 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:24:07.867 [main] INFO  Common.Log4j - Step 5: Repeat step 3 and 4 three more times
+2026-02-24 14:24:09.807 [main] INFO  Common.Log4j - VP: "Invalid username or password. Please try again" is shown
+2026-02-24 14:24:09.891 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:24:11.140 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:24:11.192 [main] INFO  Common.Log4j - TC05: Verify that user can't login with an account hasn't been activated
+2026-02-24 14:24:11.193 [main] INFO  Common.Log4j - Pre-condition: a not-active account is existing
+2026-02-24 14:24:33.371 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:24:34.178 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-24 14:24:34.830 [main] INFO  Common.Log4j - Step 3: Enter username and password of account hasn't been activated.
+2026-02-24 14:24:34.830 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-24 14:24:35.964 [main] INFO  Common.Log4j - VP: User can't login and message "Invalid username or password. Please try again." appears.
+2026-02-24 14:24:36.026 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:24:37.326 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:24:37.381 [main] INFO  Common.Log4j - TC06: Verify that user is redirected to Home page after logging out 
+2026-02-24 14:24:37.382 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:24:48.787 [main] INFO  Common.Log4j - Step 2: Login with valid Email and Password
+2026-02-24 14:24:51.569 [main] INFO  Common.Log4j - Step 3:  Click on 'FAQ' tab
+2026-02-24 14:24:52.266 [main] INFO  Common.Log4j - Step 4: Click on 'Log out' tab
+2026-02-24 14:24:53.478 [main] INFO  Common.Log4j - VP: Home page displays.
+2026-02-24 14:24:53.495 [main] INFO  Common.Log4j - VP: "Log out" tab is disappeared.
+2026-02-24 14:24:53.510 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:24:54.624 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:24:54.664 [main] INFO  Common.Log4j - TC07: User can't create account with an already in-use email
+2026-02-24 14:24:54.664 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-24 14:25:45.357 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:26:15.947 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-24 14:26:16.266 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:26:20.424 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:26:20.477 [main] INFO  Common.Log4j - TC08: Verify that user can't create account while password and PID fields are empty
+2026-02-24 14:26:20.478 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-24 14:26:25.373 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-24 14:26:25.397 [main] INFO  Common.Log4j - Post-condition
+2026-02-24 14:26:26.747 [main] INFO  Common.Log4j - Pre-condition
+2026-02-24 14:26:26.815 [main] INFO  Common.Log4j - TC09: Verify that user create and activate account
+2026-02-24 14:26:26.816 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website

@@ -1,0 +1,617 @@
+2026-02-23 04:44:49.381 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:44:49.707 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-23 04:44:49.708 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:44:51.745 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:44:51.802 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:44:56.293 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:44:56.628 [main] INFO  Common.Log4j - TC02: Verify that user cannot login with blank 'Username' textbox
+2026-02-23 04:44:56.629 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:45:09.751 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:45:10.082 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-23 04:45:10.082 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:45:11.941 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:45:12.591 [main] INFO  Common.Log4j - Step 3: Enter valid Email and Password
+2026-02-23 04:45:12.592 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:45:12.592 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-23 04:45:13.953 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:45:18.851 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:45:19.153 [main] INFO  Common.Log4j - TC02: Verify that user cannot login with blank 'Username' textbox
+2026-02-23 04:45:19.153 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:45:21.051 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:45:21.673 [main] INFO  Common.Log4j - Step 3: User doesn't type any words into 'Username' textbox but enter valid information into 'Password' textbox 
+2026-02-23 04:45:21.673 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:45:22.317 [main] INFO  Common.Log4j - VP: User can't login and message "There was a problem with your login and/or errors exist in your form. " appears.
+2026-02-23 04:45:22.348 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:45:27.882 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:45:28.239 [main] INFO  Common.Log4j - TC03: Verify that user cannot log into Railway with invalid password 
+2026-02-23 04:45:28.241 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:45:30.157 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:45:30.817 [main] INFO  Common.Log4j - Step 3: Enter valid Email and invalid Password
+2026-02-23 04:45:30.817 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:45:31.512 [main] INFO  Common.Log4j - VP: Error message "There was a problem with your login and/or errors exist in your form." is displayed
+2026-02-23 04:45:31.533 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:45:35.769 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:45:36.071 [main] INFO  Common.Log4j - TC04: Verify that system shows message when user enters wrong password many times
+2026-02-23 04:45:36.071 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:45:38.002 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:45:38.640 [main] INFO  Common.Log4j - Step 3: Enter valid information into 'Username' textbox except 'Password' textbox.
+2026-02-23 04:45:38.640 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:45:38.641 [main] INFO  Common.Log4j - Step 5: Repeat step 3 and 4 three more times
+2026-02-23 04:45:39.321 [main] INFO  Common.Log4j - VP: "Invalid username or password. Please try again" is shown
+2026-02-23 04:45:39.386 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:45:44.115 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:45:44.402 [main] INFO  Common.Log4j - TC05: Verify that user can't login with an account hasn't been activated
+2026-02-23 04:45:44.403 [main] INFO  Common.Log4j - Pre-condition: a not-active account is existing
+2026-02-23 04:45:58.139 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:45:58.977 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:45:59.546 [main] INFO  Common.Log4j - Step 3: Enter username and password of account hasn't been activated.
+2026-02-23 04:45:59.547 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:46:00.258 [main] INFO  Common.Log4j - VP: User can't login and message "Invalid username or password. Please try again." appears.
+2026-02-23 04:46:00.285 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:46:05.161 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:46:05.484 [main] INFO  Common.Log4j - TC06: Verify that user is redirected to Home page after logging out 
+2026-02-23 04:46:05.485 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:46:07.444 [main] INFO  Common.Log4j - Step 2: Login with valid Email and Password
+2026-02-23 04:46:09.407 [main] INFO  Common.Log4j - Step 3:  Click on 'FAQ' tab
+2026-02-23 04:46:10.018 [main] INFO  Common.Log4j - Step 4: Click on 'Log out' tab
+2026-02-23 04:46:11.099 [main] INFO  Common.Log4j - VP: Home page displays.
+2026-02-23 04:46:11.114 [main] INFO  Common.Log4j - VP: "Log out" tab is disappeared.
+2026-02-23 04:46:11.125 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:46:15.896 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:46:16.193 [main] INFO  Common.Log4j - TC07: User can't create account with an already in-use email
+2026-02-23 04:46:16.193 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:46:45.380 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [f6d71c20-3e71-4123-a98a-d43470956ef2, clickElement {id=c199cb5b-986f-4e10-8a65-d494c94c944a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32088, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (f6d71c20-3e71-4123-a98a-d43470956ef2)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'confirmation code')]]
+Session ID: f6d71c20-3e71-4123-a98a-d43470956ef2
+2026-02-23 04:46:48.196 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:46:49.014 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-23 04:46:49.761 [main] INFO  Common.Log4j - Step 3: Enter information of the created account in Pre-condition
+2026-02-23 04:46:49.761 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 04:46:50.715 [main] INFO  Common.Log4j - VP: Error message "This email address is already in use." displays above the form.
+2026-02-23 04:46:50.785 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:46:55.185 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:46:55.473 [main] INFO  Common.Log4j - TC08: Verify that user can't create account while password and PID fields are empty
+2026-02-23 04:46:55.473 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:46:57.373 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-23 04:46:58.013 [main] INFO  Common.Log4j - Step 3: Enter valid email address and leave other fields empty
+2026-02-23 04:46:58.014 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 04:46:58.615 [main] INFO  Common.Log4j - VP: Message "There're errors in the form. Please correct the errors and try again." appears above the form.
+2026-02-23 04:46:58.638 [main] INFO  Common.Log4j - VP: Next to password fields, error message "Invalid password length." displays
+2026-02-23 04:46:58.651 [main] INFO  Common.Log4j - VP: Next to PID field, error message "Invalid ID length." displays
+2026-02-23 04:46:58.665 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:47:03.408 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:47:03.722 [main] INFO  Common.Log4j - TC09: Verify that user create and activate account
+2026-02-23 04:47:03.723 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:47:05.655 [main] INFO  Common.Log4j - VP: Home page is shown with guide containing href "create an account" to "Register" page
+2026-02-23 04:47:05.674 [main] INFO  Common.Log4j - Step 2:  Click on "Create an account"
+2026-02-23 04:47:06.305 [main] INFO  Common.Log4j - VP: Register page is shown
+2026-02-23 04:47:06.311 [main] INFO  Common.Log4j - Step 3:  Enter valid information into all fields
+2026-02-23 04:47:06.311 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 04:47:06.311 [main] INFO  Common.Log4j - Step 5: Get email information (webmail address, mailbox and password) and navigate to that webmail 
+2026-02-23 04:47:06.311 [main] INFO  Common.Log4j - Step 6: Login to the mailbox
+2026-02-23 04:47:06.311 [main] INFO  Common.Log4j - Step 7: Open email with subject containing "Please confirm your account"  and the email of the new account at step 3
+2026-02-23 04:47:06.311 [main] INFO  Common.Log4j - Step 8: Click on the activate link
+2026-02-23 04:47:16.590 [main] INFO  Common.Log4j - VP: "Thank you for registering your account" is shown
+2026-02-23 04:47:28.995 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [42a3a934-19cc-418e-8fa4-c3124cfc48a0, clickElement {id=74775654-7bc7-4dae-b7c3-aeea4fd0580d}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 5980, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (42a3a934-19cc-418e-8fa4-c3124cfc48a0)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'confirmation code')]]
+Session ID: 42a3a934-19cc-418e-8fa4-c3124cfc48a0
+2026-02-23 04:47:31.462 [main] INFO  Common.Log4j - VP: Redirect to Railways page and message "Registration Confirmed! You can now log in to the site" is shown
+2026-02-23 04:47:31.525 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:47:35.942 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:47:36.288 [main] INFO  Common.Log4j - TC10: Verify that reset password shows error if the new password is same as current
+2026-02-23 04:47:36.289 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:48:03.899 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4608234a-7239-4162-9cb5-4d22690ce710, clickElement {id=d8d1a56b-f8ec-48b5-b62b-dd46ddf9b5ad}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19952, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (4608234a-7239-4162-9cb5-4d22690ce710)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'confirmation code')]]
+Session ID: 4608234a-7239-4162-9cb5-4d22690ce710
+2026-02-23 04:48:06.444 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Login page
+2026-02-23 04:48:07.859 [main] INFO  Common.Log4j - Step 2: Click on "Forgot Password page" link
+2026-02-23 04:48:07.859 [main] INFO  Common.Log4j - Step 3: Enter the email address of the activated account
+2026-02-23 04:48:07.859 [main] INFO  Common.Log4j - Step 4: Click on "Send Instructions" button
+2026-02-23 04:48:07.859 [main] INFO  Common.Log4j - Step 5: Login to the mailbox (the same mailbox when creating account) 
+2026-02-23 04:48:07.861 [main] INFO  Common.Log4j - Step 6: Open email with subject contaning "Please reset your password" and the email of the account at step 3
+2026-02-23 04:48:07.861 [main] INFO  Common.Log4j - Step 7: Click on reset link
+2026-02-23 04:48:22.875 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4608234a-7239-4162-9cb5-4d22690ce710, clickElement {id=e4da10b0-7e84-40b5-8c8b-59c3616502ca}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19952, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (4608234a-7239-4162-9cb5-4d22690ce710)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'password reset')]]
+Session ID: 4608234a-7239-4162-9cb5-4d22690ce710
+2026-02-23 04:48:23.762 [main] INFO  Common.Log4j - VP: Redirect to Railways page and Form "Password Change Form" is shown with the reset password token
+2026-02-23 04:48:24.334 [main] INFO  Common.Log4j - Step 8: Input same password into 2 fields "new password" and "confirm password"
+2026-02-23 04:48:24.334 [main] INFO  Common.Log4j - Step 9: Click Reset Password
+2026-02-23 04:48:25.179 [main] INFO  Common.Log4j - VP: The new password cannot be the same with the current password\" is shown
+2026-02-23 04:48:25.257 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:48:30.093 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:48:30.381 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 04:48:30.381 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:49:15.849 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Login page
+2026-02-23 04:49:17.386 [main] INFO  Common.Log4j - Step 2: Click on "Forgot Password page" link
+2026-02-23 04:49:17.386 [main] INFO  Common.Log4j - Step 3: Enter the email address of the activated account
+2026-02-23 04:49:17.386 [main] INFO  Common.Log4j - Step 4: Click on "Send Instructions" button
+2026-02-23 04:49:17.386 [main] INFO  Common.Log4j - Step 5: Login to the mailbox (the same mailbox when creating account)
+2026-02-23 04:49:17.386 [main] INFO  Common.Log4j - Step 6: Open email with subject contaning "Please reset your password" and the email of the account at step 3
+2026-02-23 04:49:17.386 [main] INFO  Common.Log4j - Step 7: Click on reset link
+2026-02-23 04:49:31.926 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [74b829e4-65aa-4eb0-973d-6211e689e222, clickElement {id=84f83c96-b10e-4aba-b765-c394da4184e0}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17700, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (74b829e4-65aa-4eb0-973d-6211e689e222)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'password reset')]]
+Session ID: 74b829e4-65aa-4eb0-973d-6211e689e222
+2026-02-23 04:49:32.684 [main] INFO  Common.Log4j - VP: Redirect to Railways page and Form "Password Change Form" is shown with the reset password token
+2026-02-23 04:49:33.268 [main] INFO  Common.Log4j - Step 8: Input different input into 2 fields  "new password" and "confirm password"
+2026-02-23 04:49:33.268 [main] INFO  Common.Log4j - Step 9: Click Reset Password
+2026-02-23 04:49:33.937 [main] INFO  Common.Log4j - VP: Error message "Could not reset password. Please correct the errors and try again." displays above the form.
+Error message "The password confirmation did not match the new password." displays next to the confirm password field.
+2026-02-23 04:49:34.014 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:49:40.084 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:49:40.371 [main] INFO  Common.Log4j - TC12: Verify that user can book 1 ticket at a time
+2026-02-23 04:49:40.371 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:50:14.028 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d12dc078-01ce-4c28-ad80-8ee2b196d02a, clickElement {id=e9070cfb-d991-4e0e-b6c9-acf468245914}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 33068, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (d12dc078-01ce-4c28-ad80-8ee2b196d02a)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'confirmation code')]]
+Session ID: d12dc078-01ce-4c28-ad80-8ee2b196d02a
+2026-02-23 04:50:17.514 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:50:18.489 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 04:50:20.408 [main] INFO  Common.Log4j - Step 3: Click on "Book ticket" tab
+2026-02-23 04:50:21.278 [main] INFO  Common.Log4j - Step 4: Select the next 2 days from "Depart date"
+2026-02-23 04:50:21.278 [main] INFO  Common.Log4j - Step 5: Select Depart from "Nha Trang" and Arrive at "Huế"
+2026-02-23 04:50:21.278 [main] INFO  Common.Log4j - Step 6: Select "Soft bed with air conditioner" for "Seat type"
+2026-02-23 04:50:21.279 [main] INFO  Common.Log4j - Step 7: Select "1" for "Ticket amount"
+2026-02-23 04:50:21.279 [main] INFO  Common.Log4j - Step 8: Click on "Book ticket" button
+2026-02-23 04:50:23.126 [main] INFO  Common.Log4j - VP: Message "Ticket booked successfully!" displays. Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount)
+2026-02-23 04:50:23.204 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:50:27.739 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:50:28.050 [main] INFO  Common.Log4j - TC13: Verify that user can book many tickets at a time
+2026-02-23 04:50:28.050 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:50:59.752 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:51:00.592 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 04:51:02.323 [main] INFO  Common.Log4j - Step 3: Click on "Book ticket" tab
+2026-02-23 04:51:02.877 [main] INFO  Common.Log4j - Step 4: Select the next 25 days from "Depart date"
+2026-02-23 04:51:02.877 [main] INFO  Common.Log4j - Step 5: Select "Nha Trang" for "Depart from" and "Sài Gòn" for "Arrive at"
+2026-02-23 04:51:02.877 [main] INFO  Common.Log4j - Step 6: Select "Soft seat with air conditioner" for "Seat type"
+2026-02-23 04:51:02.877 [main] INFO  Common.Log4j - Step 7: Select "5" for "Ticket amount"
+2026-02-23 04:51:02.877 [main] INFO  Common.Log4j - Step 8: Click on "Book ticket" button
+2026-02-23 04:51:05.073 [main] INFO  Common.Log4j - VP: Message "Ticket booked successfully!" displays. Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount)
+2026-02-23 04:51:05.158 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:51:09.644 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:51:09.934 [main] INFO  Common.Log4j - TC14: Verify that user can check price of ticket from Timetable
+2026-02-23 04:51:09.934 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:51:38.166 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0a84cf28-a4dd-4c26-a40d-a0d9da87c0bc, clickElement {id=3d859ce1-4676-4e29-b1fc-519f1704ddf5}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 34728, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (0a84cf28-a4dd-4c26-a40d-a0d9da87c0bc)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'confirmation code')]]
+Session ID: 0a84cf28-a4dd-4c26-a40d-a0d9da87c0bc
+2026-02-23 04:51:40.784 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:51:41.625 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 04:51:43.458 [main] INFO  Common.Log4j - Step 3: Click on "Timetable" tab
+2026-02-23 04:51:44.171 [main] INFO  Common.Log4j - Step 4: Click on "check price" link of the route from "Đà Nẵng" to "Sài Gòn"
+2026-02-23 04:51:44.837 [main] INFO  Common.Log4j - VP: "Ticket Price" page is loaded.
+Ticket table shows "Ticket price from Đà Nẵng to Sài Gòn".
+Price for each seat displays correctly
+HS = 310000, SS = 335000, SSC = 360000, HB = 410000, SB = 460000, SBC = 510000
+2026-02-23 04:51:45.068 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:51:49.807 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:51:50.116 [main] INFO  Common.Log4j - TC15: Verify that user can book ticket from Timetable
+2026-02-23 04:51:50.116 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:52:20.801 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:52:21.628 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 04:52:23.538 [main] INFO  Common.Log4j - Step 3: Click on "Timetable" tab
+2026-02-23 04:52:24.192 [main] INFO  Common.Log4j - Step 4: Click on book ticket of route "Quảng Ngãi" to "Huế"
+2026-02-23 04:52:24.957 [main] INFO  Common.Log4j - VP: Book ticket form is shown with the corrected "depart from" and "Arrive at"
+2026-02-23 04:52:25.101 [main] INFO  Common.Log4j - Step 5: Select Depart date = tomorrow
+2026-02-23 04:52:25.101 [main] INFO  Common.Log4j - Step 6: Select Ticket amount = 5
+2026-02-23 04:52:25.101 [main] INFO  Common.Log4j - Step 7: Click on "Book ticket" button
+2026-02-23 04:52:25.568 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:52:29.932 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:52:30.221 [main] INFO  Common.Log4j - TC16: Verify that user can cancel a ticket
+2026-02-23 04:52:30.221 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:52:59.319 [main] WARN  Common.Log4j - Normal click failed, using JS click: Element <span class="email-excerpt"> could not be scrolled into view
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7f55314e-0ad9-4613-9a65-54be3469b9a7, clickElement {id=99189ba5-b9ef-47e8-9b1d-5b886a4c028a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.4, moz:accessibilityChecks: false, moz:buildID: 20260212191108, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12320, moz:profile: C:\Users\1202p\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (7f55314e-0ad9-4613-9a65-54be3469b9a7)] -> xpath: //tbody[@id='email_list']//span[contains(text(),'confirmation code')]]
+Session ID: 7f55314e-0ad9-4613-9a65-54be3469b9a7
+2026-02-23 04:53:01.927 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:53:02.716 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 04:53:04.741 [main] INFO  Common.Log4j - Step 3: Book a ticket
+2026-02-23 04:53:07.401 [main] INFO  Common.Log4j - Step 4:  Click on "My ticket" tab
+2026-02-23 04:53:08.098 [main] INFO  Common.Log4j - Step 5: Click on "Cancel" button of ticket which user want to cancel
+2026-02-23 04:53:08.098 [main] INFO  Common.Log4j - Step 6: Click on "OK" button on Confirmation message "Are you sure?"
+2026-02-23 04:53:08.422 [main] INFO  Common.Log4j - VP: The canceled ticket is disappeared.
+2026-02-23 04:53:08.507 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:58:21.284 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:58:21.350 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-23 04:58:21.350 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:58:24.169 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:58:24.853 [main] INFO  Common.Log4j - Step 3: Enter valid Email and Password
+2026-02-23 04:58:24.854 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:58:24.854 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-23 04:58:26.542 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:58:27.880 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:58:27.935 [main] INFO  Common.Log4j - TC02: Verify that user cannot login with blank 'Username' textbox
+2026-02-23 04:58:27.936 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:58:30.597 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:58:31.279 [main] INFO  Common.Log4j - Step 3: User doesn't type any words into 'Username' textbox but enter valid information into 'Password' textbox 
+2026-02-23 04:58:31.279 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:58:32.168 [main] INFO  Common.Log4j - VP: User can't login and message "There was a problem with your login and/or errors exist in your form. " appears.
+2026-02-23 04:58:32.206 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:58:33.431 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:58:33.477 [main] INFO  Common.Log4j - TC03: Verify that user cannot log into Railway with invalid password 
+2026-02-23 04:58:33.477 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:58:36.172 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:58:36.864 [main] INFO  Common.Log4j - Step 3: Enter valid Email and invalid Password
+2026-02-23 04:58:36.864 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:58:38.220 [main] INFO  Common.Log4j - VP: Error message "There was a problem with your login and/or errors exist in your form." is displayed
+2026-02-23 04:58:38.290 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:58:39.631 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:58:39.686 [main] INFO  Common.Log4j - TC04: Verify that system shows message when user enters wrong password many times
+2026-02-23 04:58:39.686 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:58:42.388 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:58:43.099 [main] INFO  Common.Log4j - Step 3: Enter valid information into 'Username' textbox except 'Password' textbox.
+2026-02-23 04:58:43.099 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:58:43.099 [main] INFO  Common.Log4j - Step 5: Repeat step 3 and 4 three more times
+2026-02-23 04:58:44.162 [main] INFO  Common.Log4j - VP: "Invalid username or password. Please try again" is shown
+2026-02-23 04:58:44.245 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:58:45.425 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:58:45.465 [main] INFO  Common.Log4j - TC05: Verify that user can't login with an account hasn't been activated
+2026-02-23 04:58:45.467 [main] INFO  Common.Log4j - Pre-condition: a not-active account is existing
+2026-02-23 04:58:59.754 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:59:00.694 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 04:59:01.583 [main] INFO  Common.Log4j - Step 3: Enter username and password of account hasn't been activated.
+2026-02-23 04:59:01.583 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 04:59:02.805 [main] INFO  Common.Log4j - VP: User can't login and message "Invalid username or password. Please try again." appears.
+2026-02-23 04:59:02.851 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:59:04.213 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:59:04.268 [main] INFO  Common.Log4j - TC06: Verify that user is redirected to Home page after logging out 
+2026-02-23 04:59:04.268 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:59:06.729 [main] INFO  Common.Log4j - Step 2: Login with valid Email and Password
+2026-02-23 04:59:09.105 [main] INFO  Common.Log4j - Step 3:  Click on 'FAQ' tab
+2026-02-23 04:59:09.833 [main] INFO  Common.Log4j - Step 4: Click on 'Log out' tab
+2026-02-23 04:59:10.931 [main] INFO  Common.Log4j - VP: Home page displays.
+2026-02-23 04:59:10.947 [main] INFO  Common.Log4j - VP: "Log out" tab is disappeared.
+2026-02-23 04:59:10.960 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:59:12.145 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:59:12.207 [main] INFO  Common.Log4j - TC07: User can't create account with an already in-use email
+2026-02-23 04:59:12.208 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 04:59:42.186 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:59:42.912 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-23 04:59:43.510 [main] INFO  Common.Log4j - Step 3: Enter information of the created account in Pre-condition
+2026-02-23 04:59:43.510 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 04:59:44.543 [main] INFO  Common.Log4j - VP: Error message "This email address is already in use." displays above the form.
+2026-02-23 04:59:44.815 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:59:46.069 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:59:46.169 [main] INFO  Common.Log4j - TC08: Verify that user can't create account while password and PID fields are empty
+2026-02-23 04:59:46.170 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:59:48.766 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-23 04:59:49.427 [main] INFO  Common.Log4j - Step 3: Enter valid email address and leave other fields empty
+2026-02-23 04:59:49.429 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 04:59:49.775 [main] INFO  Common.Log4j - VP: Message "There're errors in the form. Please correct the errors and try again." appears above the form.
+2026-02-23 04:59:50.334 [main] INFO  Common.Log4j - VP: Next to password fields, error message "Invalid password length." displays
+2026-02-23 04:59:50.364 [main] INFO  Common.Log4j - VP: Next to PID field, error message "Invalid ID length." displays
+2026-02-23 04:59:50.396 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 04:59:51.577 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 04:59:51.621 [main] INFO  Common.Log4j - TC09: Verify that user create and activate account
+2026-02-23 04:59:51.621 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 04:59:54.229 [main] INFO  Common.Log4j - VP: Home page is shown with guide containing href "create an account" to "Register" page
+2026-02-23 04:59:54.257 [main] INFO  Common.Log4j - Step 2:  Click on "Create an account"
+2026-02-23 04:59:54.878 [main] INFO  Common.Log4j - VP: Register page is shown
+2026-02-23 04:59:54.897 [main] INFO  Common.Log4j - Step 3:  Enter valid information into all fields
+2026-02-23 04:59:54.897 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 04:59:54.897 [main] INFO  Common.Log4j - Step 5: Get email information (webmail address, mailbox and password) and navigate to that webmail 
+2026-02-23 04:59:54.897 [main] INFO  Common.Log4j - Step 6: Login to the mailbox
+2026-02-23 04:59:54.898 [main] INFO  Common.Log4j - Step 7: Open email with subject containing "Please confirm your account"  and the email of the new account at step 3
+2026-02-23 04:59:54.898 [main] INFO  Common.Log4j - Step 8: Click on the activate link
+2026-02-23 05:00:04.910 [main] INFO  Common.Log4j - VP: "Thank you for registering your account" is shown
+2026-02-23 05:00:20.196 [main] INFO  Common.Log4j - VP: Redirect to Railways page and message "Registration Confirmed! You can now log in to the site" is shown
+2026-02-23 05:00:20.259 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:00:21.590 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:00:21.640 [main] INFO  Common.Log4j - TC10: Verify that reset password shows error if the new password is same as current
+2026-02-23 05:00:21.640 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:00:51.871 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Login page
+2026-02-23 05:00:53.379 [main] INFO  Common.Log4j - Step 2: Click on "Forgot Password page" link
+2026-02-23 05:00:53.379 [main] INFO  Common.Log4j - Step 3: Enter the email address of the activated account
+2026-02-23 05:00:53.379 [main] INFO  Common.Log4j - Step 4: Click on "Send Instructions" button
+2026-02-23 05:00:53.379 [main] INFO  Common.Log4j - Step 5: Login to the mailbox (the same mailbox when creating account) 
+2026-02-23 05:00:53.379 [main] INFO  Common.Log4j - Step 6: Open email with subject contaning "Please reset your password" and the email of the account at step 3
+2026-02-23 05:00:53.379 [main] INFO  Common.Log4j - Step 7: Click on reset link
+2026-02-23 05:01:17.116 [main] INFO  Common.Log4j - VP: Redirect to Railways page and Form "Password Change Form" is shown with the reset password token
+2026-02-23 05:01:17.563 [main] INFO  Common.Log4j - Step 8: Input same password into 2 fields "new password" and "confirm password"
+2026-02-23 05:01:17.565 [main] INFO  Common.Log4j - Step 9: Click Reset Password
+2026-02-23 05:01:18.360 [main] INFO  Common.Log4j - VP: The new password cannot be the same with the current password\" is shown
+2026-02-23 05:01:18.706 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:01:20.177 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:01:20.225 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 05:01:20.225 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:01:50.374 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Login page
+2026-02-23 05:01:51.882 [main] INFO  Common.Log4j - Step 2: Click on "Forgot Password page" link
+2026-02-23 05:01:51.883 [main] INFO  Common.Log4j - Step 3: Enter the email address of the activated account
+2026-02-23 05:01:51.884 [main] INFO  Common.Log4j - Step 4: Click on "Send Instructions" button
+2026-02-23 05:01:51.884 [main] INFO  Common.Log4j - Step 5: Login to the mailbox (the same mailbox when creating account)
+2026-02-23 05:01:51.884 [main] INFO  Common.Log4j - Step 6: Open email with subject contaning "Please reset your password" and the email of the account at step 3
+2026-02-23 05:01:51.884 [main] INFO  Common.Log4j - Step 7: Click on reset link
+2026-02-23 05:02:08.218 [main] INFO  Common.Log4j - VP: Redirect to Railways page and Form "Password Change Form" is shown with the reset password token
+2026-02-23 05:02:08.782 [main] INFO  Common.Log4j - Step 8: Input different input into 2 fields  "new password" and "confirm password"
+2026-02-23 05:02:08.782 [main] INFO  Common.Log4j - Step 9: Click Reset Password
+2026-02-23 05:02:09.742 [main] INFO  Common.Log4j - VP: Error message "Could not reset password. Please correct the errors and try again." displays above the form.
+Error message "The password confirmation did not match the new password." displays next to the confirm password field.
+2026-02-23 05:02:10.152 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:02:11.975 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:02:12.022 [main] INFO  Common.Log4j - TC12: Verify that user can book 1 ticket at a time
+2026-02-23 05:02:12.023 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:02:42.440 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:02:43.190 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:02:45.795 [main] INFO  Common.Log4j - Step 3: Click on "Book ticket" tab
+2026-02-23 05:02:46.679 [main] INFO  Common.Log4j - Step 4: Select the next 2 days from "Depart date"
+2026-02-23 05:02:46.679 [main] INFO  Common.Log4j - Step 5: Select Depart from "Nha Trang" and Arrive at "Huế"
+2026-02-23 05:02:46.679 [main] INFO  Common.Log4j - Step 6: Select "Soft bed with air conditioner" for "Seat type"
+2026-02-23 05:02:46.679 [main] INFO  Common.Log4j - Step 7: Select "1" for "Ticket amount"
+2026-02-23 05:02:46.679 [main] INFO  Common.Log4j - Step 8: Click on "Book ticket" button
+2026-02-23 05:02:49.453 [main] INFO  Common.Log4j - VP: Message "Ticket booked successfully!" displays. Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount)
+2026-02-23 05:02:49.778 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:02:51.270 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:02:51.305 [main] INFO  Common.Log4j - TC13: Verify that user can book many tickets at a time
+2026-02-23 05:02:51.306 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:03:24.564 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:03:25.315 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:03:27.772 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:03:29.169 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:03:29.201 [main] INFO  Common.Log4j - TC14: Verify that user can check price of ticket from Timetable
+2026-02-23 05:03:29.201 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:04:00.026 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:04:00.760 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:04:02.917 [main] INFO  Common.Log4j - Step 3: Click on "Timetable" tab
+2026-02-23 05:04:03.576 [main] INFO  Common.Log4j - Step 4: Click on "check price" link of the route from "Đà Nẵng" to "Sài Gòn"
+2026-02-23 05:04:04.399 [main] INFO  Common.Log4j - VP: "Ticket Price" page is loaded.
+Ticket table shows "Ticket price from Đà Nẵng to Sài Gòn".
+Price for each seat displays correctly
+HS = 310000, SS = 335000, SSC = 360000, HB = 410000, SB = 460000, SBC = 510000
+2026-02-23 05:04:04.876 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:04:06.265 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:04:06.300 [main] INFO  Common.Log4j - TC15: Verify that user can book ticket from Timetable
+2026-02-23 05:04:06.300 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:04:37.447 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:04:38.196 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:04:41.158 [main] INFO  Common.Log4j - Step 3: Click on "Timetable" tab
+2026-02-23 05:04:41.890 [main] INFO  Common.Log4j - Step 4: Click on book ticket of route "Quảng Ngãi" to "Huế"
+2026-02-23 05:04:42.729 [main] INFO  Common.Log4j - VP: Book ticket form is shown with the corrected "depart from" and "Arrive at"
+2026-02-23 05:04:43.084 [main] INFO  Common.Log4j - Step 5: Select Depart date = tomorrow
+2026-02-23 05:04:43.085 [main] INFO  Common.Log4j - Step 6: Select Ticket amount = 5
+2026-02-23 05:04:43.085 [main] INFO  Common.Log4j - Step 7: Click on "Book ticket" button
+2026-02-23 05:04:43.518 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:04:45.344 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:04:45.425 [main] INFO  Common.Log4j - TC16: Verify that user can cancel a ticket
+2026-02-23 05:04:45.425 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:05:15.591 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:05:16.349 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:05:18.752 [main] INFO  Common.Log4j - Step 3: Book a ticket
+2026-02-23 05:05:21.053 [main] INFO  Common.Log4j - Step 4:  Click on "My ticket" tab
+2026-02-23 05:05:22.768 [main] INFO  Common.Log4j - Step 5: Click on "Cancel" button of ticket which user want to cancel
+2026-02-23 05:05:22.768 [main] INFO  Common.Log4j - Step 6: Click on "OK" button on Confirmation message "Are you sure?"
+2026-02-23 05:05:23.075 [main] INFO  Common.Log4j - VP: The canceled ticket is disappeared.
+2026-02-23 05:05:23.259 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:10:10.683 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:10:10.760 [main] INFO  Common.Log4j - TC01: Verify that user can log into Railway with valid username and password
+2026-02-23 05:10:10.760 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:10:13.380 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 05:10:14.076 [main] INFO  Common.Log4j - Step 3: Enter valid Email and Password
+2026-02-23 05:10:14.078 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 05:10:14.078 [main] INFO  Common.Log4j - VP: User is logged into Railway. Welcome user message is displayed.
+2026-02-23 05:10:15.745 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:10:17.410 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:10:17.480 [main] INFO  Common.Log4j - TC02: Verify that user cannot login with blank 'Username' textbox
+2026-02-23 05:10:17.482 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:10:19.911 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 05:10:20.560 [main] INFO  Common.Log4j - Step 3: User doesn't type any words into 'Username' textbox but enter valid information into 'Password' textbox 
+2026-02-23 05:10:20.562 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 05:10:21.505 [main] INFO  Common.Log4j - VP: User can't login and message "There was a problem with your login and/or errors exist in your form. " appears.
+2026-02-23 05:10:21.559 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:10:23.153 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:10:23.209 [main] INFO  Common.Log4j - TC03: Verify that user cannot log into Railway with invalid password 
+2026-02-23 05:10:23.211 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:10:25.603 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 05:10:26.302 [main] INFO  Common.Log4j - Step 3: Enter valid Email and invalid Password
+2026-02-23 05:10:26.303 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 05:10:27.453 [main] INFO  Common.Log4j - VP: Error message "There was a problem with your login and/or errors exist in your form." is displayed
+2026-02-23 05:10:27.507 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:10:28.988 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:10:29.052 [main] INFO  Common.Log4j - TC04: Verify that system shows message when user enters wrong password many times
+2026-02-23 05:10:29.052 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:10:31.463 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 05:10:32.209 [main] INFO  Common.Log4j - Step 3: Enter valid information into 'Username' textbox except 'Password' textbox.
+2026-02-23 05:10:32.210 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 05:10:32.210 [main] INFO  Common.Log4j - Step 5: Repeat step 3 and 4 three more times
+2026-02-23 05:10:33.108 [main] INFO  Common.Log4j - VP: "Invalid username or password. Please try again" is shown
+2026-02-23 05:10:33.174 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:10:34.711 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:10:34.805 [main] INFO  Common.Log4j - TC05: Verify that user can't login with an account hasn't been activated
+2026-02-23 05:10:34.806 [main] INFO  Common.Log4j - Pre-condition: a not-active account is existing
+2026-02-23 05:10:50.544 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:10:51.586 [main] INFO  Common.Log4j - Step 2: Click on 'Login' tab
+2026-02-23 05:10:52.310 [main] INFO  Common.Log4j - Step 3: Enter username and password of account hasn't been activated.
+2026-02-23 05:10:52.310 [main] INFO  Common.Log4j - Step 4: Click on 'Login' button
+2026-02-23 05:10:53.367 [main] INFO  Common.Log4j - VP: User can't login and message "Invalid username or password. Please try again." appears.
+2026-02-23 05:10:53.410 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:10:54.968 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:10:55.030 [main] INFO  Common.Log4j - TC06: Verify that user is redirected to Home page after logging out 
+2026-02-23 05:10:55.031 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:10:57.408 [main] INFO  Common.Log4j - Step 2: Login with valid Email and Password
+2026-02-23 05:10:59.714 [main] INFO  Common.Log4j - Step 3:  Click on 'FAQ' tab
+2026-02-23 05:11:00.369 [main] INFO  Common.Log4j - Step 4: Click on 'Log out' tab
+2026-02-23 05:11:01.464 [main] INFO  Common.Log4j - VP: Home page displays.
+2026-02-23 05:11:01.483 [main] INFO  Common.Log4j - VP: "Log out" tab is disappeared.
+2026-02-23 05:11:01.496 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:11:02.911 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:11:02.976 [main] INFO  Common.Log4j - TC07: User can't create account with an already in-use email
+2026-02-23 05:11:02.977 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:11:34.146 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:11:34.922 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-23 05:11:35.579 [main] INFO  Common.Log4j - Step 3: Enter information of the created account in Pre-condition
+2026-02-23 05:11:35.579 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 05:11:36.810 [main] INFO  Common.Log4j - VP: Error message "This email address is already in use." displays above the form.
+2026-02-23 05:11:37.100 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:11:38.729 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:11:38.787 [main] INFO  Common.Log4j - TC08: Verify that user can't create account while password and PID fields are empty
+2026-02-23 05:11:38.788 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:11:41.215 [main] INFO  Common.Log4j - Step 2:  Click on "Register" tab
+2026-02-23 05:11:41.876 [main] INFO  Common.Log4j - Step 3: Enter valid email address and leave other fields empty
+2026-02-23 05:11:41.876 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 05:11:42.832 [main] INFO  Common.Log4j - VP: Message "There're errors in the form. Please correct the errors and try again." appears above the form.
+2026-02-23 05:11:42.879 [main] INFO  Common.Log4j - VP: Next to password fields, error message "Invalid password length." displays
+2026-02-23 05:11:42.932 [main] INFO  Common.Log4j - VP: Next to PID field, error message "Invalid ID length." displays
+2026-02-23 05:11:42.995 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:11:44.450 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:11:44.516 [main] INFO  Common.Log4j - TC09: Verify that user create and activate account
+2026-02-23 05:11:44.516 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:11:47.030 [main] INFO  Common.Log4j - VP: Home page is shown with guide containing href "create an account" to "Register" page
+2026-02-23 05:11:47.054 [main] INFO  Common.Log4j - Step 2:  Click on "Create an account"
+2026-02-23 05:11:47.742 [main] INFO  Common.Log4j - VP: Register page is shown
+2026-02-23 05:11:47.763 [main] INFO  Common.Log4j - Step 3:  Enter valid information into all fields
+2026-02-23 05:11:47.764 [main] INFO  Common.Log4j - Step 4: Click on "Register" button
+2026-02-23 05:11:47.765 [main] INFO  Common.Log4j - Step 5: Get email information (webmail address, mailbox and password) and navigate to that webmail 
+2026-02-23 05:11:47.765 [main] INFO  Common.Log4j - Step 6: Login to the mailbox
+2026-02-23 05:11:47.766 [main] INFO  Common.Log4j - Step 7: Open email with subject containing "Please confirm your account"  and the email of the new account at step 3
+2026-02-23 05:11:47.766 [main] INFO  Common.Log4j - Step 8: Click on the activate link
+2026-02-23 05:11:59.214 [main] INFO  Common.Log4j - VP: "Thank you for registering your account" is shown
+2026-02-23 05:12:14.745 [main] INFO  Common.Log4j - VP: Redirect to Railways page and message "Registration Confirmed! You can now log in to the site" is shown
+2026-02-23 05:12:14.826 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:12:16.506 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:12:16.546 [main] INFO  Common.Log4j - TC10: Verify that reset password shows error if the new password is same as current
+2026-02-23 05:12:16.546 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:12:47.123 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Login page
+2026-02-23 05:12:48.575 [main] INFO  Common.Log4j - Step 2: Click on "Forgot Password page" link
+2026-02-23 05:12:48.575 [main] INFO  Common.Log4j - Step 3: Enter the email address of the activated account
+2026-02-23 05:12:48.575 [main] INFO  Common.Log4j - Step 4: Click on "Send Instructions" button
+2026-02-23 05:12:48.575 [main] INFO  Common.Log4j - Step 5: Login to the mailbox (the same mailbox when creating account) 
+2026-02-23 05:12:48.575 [main] INFO  Common.Log4j - Step 6: Open email with subject contaning "Please reset your password" and the email of the account at step 3
+2026-02-23 05:12:48.575 [main] INFO  Common.Log4j - Step 7: Click on reset link
+2026-02-23 05:13:04.228 [main] INFO  Common.Log4j - VP: Redirect to Railways page and Form "Password Change Form" is shown with the reset password token
+2026-02-23 05:13:04.726 [main] INFO  Common.Log4j - Step 8: Input same password into 2 fields "new password" and "confirm password"
+2026-02-23 05:13:04.726 [main] INFO  Common.Log4j - Step 9: Click Reset Password
+2026-02-23 05:13:05.856 [main] INFO  Common.Log4j - VP: The new password cannot be the same with the current password\" is shown
+2026-02-23 05:13:05.988 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:13:07.756 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:13:07.818 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 05:13:07.818 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:13:39.150 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Login page
+2026-02-23 05:13:40.540 [main] INFO  Common.Log4j - Step 2: Click on "Forgot Password page" link
+2026-02-23 05:13:40.542 [main] INFO  Common.Log4j - Step 3: Enter the email address of the activated account
+2026-02-23 05:13:40.542 [main] INFO  Common.Log4j - Step 4: Click on "Send Instructions" button
+2026-02-23 05:13:40.542 [main] INFO  Common.Log4j - Step 5: Login to the mailbox (the same mailbox when creating account)
+2026-02-23 05:13:40.542 [main] INFO  Common.Log4j - Step 6: Open email with subject contaning "Please reset your password" and the email of the account at step 3
+2026-02-23 05:13:40.542 [main] INFO  Common.Log4j - Step 7: Click on reset link
+2026-02-23 05:13:45.547 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:13:47.673 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:13:47.746 [main] INFO  Common.Log4j - TC12: Verify that user can book 1 ticket at a time
+2026-02-23 05:13:47.746 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:14:17.283 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:14:18.049 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:14:20.280 [main] INFO  Common.Log4j - Step 3: Click on "Book ticket" tab
+2026-02-23 05:14:21.032 [main] INFO  Common.Log4j - Step 4: Select the next 2 days from "Depart date"
+2026-02-23 05:14:21.033 [main] INFO  Common.Log4j - Step 5: Select Depart from "Nha Trang" and Arrive at "Huế"
+2026-02-23 05:14:21.033 [main] INFO  Common.Log4j - Step 6: Select "Soft bed with air conditioner" for "Seat type"
+2026-02-23 05:14:21.034 [main] INFO  Common.Log4j - Step 7: Select "1" for "Ticket amount"
+2026-02-23 05:14:21.034 [main] INFO  Common.Log4j - Step 8: Click on "Book ticket" button
+2026-02-23 05:14:23.424 [main] INFO  Common.Log4j - VP: Message "Ticket booked successfully!" displays. Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount)
+2026-02-23 05:14:23.614 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:14:25.199 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:14:25.254 [main] INFO  Common.Log4j - TC13: Verify that user can book many tickets at a time
+2026-02-23 05:14:25.254 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:14:56.011 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:14:56.770 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:14:59.008 [main] INFO  Common.Log4j - Step 3: Click on "Book ticket" tab
+2026-02-23 05:14:59.677 [main] INFO  Common.Log4j - Step 4: Select the next 25 days from "Depart date"
+2026-02-23 05:14:59.677 [main] INFO  Common.Log4j - Step 5: Select "Nha Trang" for "Depart from" and "Sài Gòn" for "Arrive at"
+2026-02-23 05:14:59.678 [main] INFO  Common.Log4j - Step 6: Select "Soft seat with air conditioner" for "Seat type"
+2026-02-23 05:14:59.678 [main] INFO  Common.Log4j - Step 7: Select "5" for "Ticket amount"
+2026-02-23 05:14:59.678 [main] INFO  Common.Log4j - Step 8: Click on "Book ticket" button
+2026-02-23 05:15:02.455 [main] INFO  Common.Log4j - VP: Message "Ticket booked successfully!" displays. Ticket information display correctly (Depart Date,  Depart Station,  Arrive Station,  Seat Type,  Amount)
+2026-02-23 05:15:02.643 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:15:04.368 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:15:04.422 [main] INFO  Common.Log4j - TC14: Verify that user can check price of ticket from Timetable
+2026-02-23 05:15:04.423 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:15:35.215 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:15:35.976 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:15:38.254 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:15:39.792 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:15:39.895 [main] INFO  Common.Log4j - TC15: Verify that user can book ticket from Timetable
+2026-02-23 05:15:39.896 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:16:12.425 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:16:13.185 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:16:15.511 [main] INFO  Common.Log4j - Step 3: Click on "Timetable" tab
+2026-02-23 05:16:16.192 [main] INFO  Common.Log4j - Step 4: Click on book ticket of route "Quảng Ngãi" to "Huế"
+2026-02-23 05:16:17.033 [main] INFO  Common.Log4j - VP: Book ticket form is shown with the corrected "depart from" and "Arrive at"
+2026-02-23 05:16:17.368 [main] INFO  Common.Log4j - Step 5: Select Depart date = tomorrow
+2026-02-23 05:16:17.368 [main] INFO  Common.Log4j - Step 6: Select Ticket amount = 5
+2026-02-23 05:16:17.368 [main] INFO  Common.Log4j - Step 7: Click on "Book ticket" button
+2026-02-23 05:16:17.802 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:16:19.524 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:16:19.582 [main] INFO  Common.Log4j - TC16: Verify that user can cancel a ticket
+2026-02-23 05:16:19.582 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:16:49.646 [main] INFO  Common.Log4j - Step 1: Navigate to QA Railway Website
+2026-02-23 05:16:50.393 [main] INFO  Common.Log4j - Step 2: Login with a valid account
+2026-02-23 05:16:52.624 [main] INFO  Common.Log4j - Step 3: Book a ticket
+2026-02-23 05:16:55.603 [main] INFO  Common.Log4j - Step 4:  Click on "My ticket" tab
+2026-02-23 05:16:56.323 [main] INFO  Common.Log4j - Step 5: Click on "Cancel" button of ticket which user want to cancel
+2026-02-23 05:16:56.323 [main] INFO  Common.Log4j - Step 6: Click on "OK" button on Confirmation message "Are you sure?"
+2026-02-23 05:16:56.598 [main] INFO  Common.Log4j - VP: The canceled ticket is disappeared.
+2026-02-23 05:16:56.712 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:21:56.705 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:21:56.790 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 05:21:56.792 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:28:43.955 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:28:44.054 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 05:28:44.054 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:29:32.636 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 05:37:10.193 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 05:37:10.281 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 05:37:10.281 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 05:37:27.681 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 07:44:06.363 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 07:44:06.453 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 07:44:06.454 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 09:19:50.331 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 09:19:50.445 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 09:19:50.446 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 09:19:54.067 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 09:49:13.011 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 09:49:13.077 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 09:49:13.077 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 13:02:56.488 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 13:02:56.591 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 13:02:56.591 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 13:03:19.532 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 14:37:49.911 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 14:37:50.010 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 14:37:50.011 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
+2026-02-23 14:37:54.892 [main] INFO  Common.Log4j - Post-condition
+2026-02-23 14:38:02.194 [main] INFO  Common.Log4j - Pre-condition
+2026-02-23 14:38:02.242 [main] INFO  Common.Log4j - TC11: Verify that reset password shows error if the new password and confirm password doesn't match
+2026-02-23 14:38:02.242 [main] INFO  Common.Log4j - Pre-condition: an actived account is existing
