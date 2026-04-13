@@ -1,1 +1,57 @@
-eclipse-workspace/phamnam2/target/classes/META-INF/maven/test/phamnam2/pom.properties
+# Maven
+target/
+*.jar
+*.war
+*.ear
+dependency-reduced-pom.xml
+.m2/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+bin/
+*.log
+
+# IntelliJ IDEA
+out/
+
+# Build outputs
+allure-results/
+test-output/
+logs/
+reports/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Node.js (if used)
+node_modules/
+npm-debug.log
+
+# Gradle (alternative build)
+.gradle/
+build/
+
+# Python cache (if applicable)
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.local
+*.properties
+!pom.properties

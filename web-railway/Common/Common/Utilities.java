@@ -7,11 +7,13 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Constant.Constant;
@@ -123,6 +125,54 @@ public class Utilities {
 			wait.until(ExpectedConditions.stalenessOf(element));
 		} catch (Exception e) {
 
+		}
+	}
+
+	/* FluentWait - Advanced explicit waits */
+	public static WebElement waitForClickableFluentWait(By locator) {
+		return waitForClickableFluentWait(locator, Constant.WAIT_TIMEOUT, 500);
+	}
+
+	public static WebElement waitForClickableFluentWait(By locator, int timeoutSeconds, long pollIntervalMs) {
+		FluentWait<WebElement> wait = new FluentWait<>(Constant.WEBDRIVER.findElement(locator))
+				.withTimeout(Duration.ofSeconds(timeoutSeconds))
+				.pollingEvery(Duration.ofMillis(pollIntervalMs))
+				.ignoring(StaleElementReferenceException.class)
+				.ignoring(ElementNotInteractableException.class);
+
+		try {
+			wait.until(element -> {
+				try {
+					element.click();
+					return true;
+				} catch (Exception e) {
+					return false;
+				}
+			});
+			return Constant.WEBDRIVER.findElement(locator);
+		} catch (TimeoutException e) {
+			Log4j.error("FluentWait timeout for clickable element: " + locator);
+			throw e;
+		}
+	}
+
+	public static WebElement waitForVisibleFluentWait(By locator) {
+		return waitForVisibleFluentWait(locator, Constant.WAIT_TIMEOUT, 500);
+	}
+
+	public static WebElement waitForVisibleFluentWait(By locator, int timeoutSeconds, long pollIntervalMs) {
+		FluentWait<WebElement> wait = new FluentWait<>(Constant.WEBDRIVER.findElement(locator))
+				.withTimeout(Duration.ofSeconds(timeoutSeconds))
+				.pollingEvery(Duration.ofMillis(pollIntervalMs))
+				.ignoring(StaleElementReferenceException.class)
+				.ignoring(NoSuchElementException.class);
+
+		try {
+			wait.until(element -> element.isDisplayed());
+			return Constant.WEBDRIVER.findElement(locator);
+		} catch (TimeoutException e) {
+			Log4j.error("FluentWait timeout for visible element: " + locator);
+			throw e;
 		}
 	}
 

@@ -2,107 +2,164 @@
 
 Automated testing framework for Railway Ticket Booking System using Selenium WebDriver, TestNG, and Page Object Model (POM) pattern.
 
-## Project Information
-
-**Application Under Test:** SafeRailway  
 **Author:** Phạm Văn Nam
 
-## Technologies
+---
 
-- Java 11+
-- Selenium WebDriver 4.27.0
-- TestNG 7.12.0
-- Maven 3.x
-- Log4j 2
-- Jackson
+## Overview
+
+| Item | Details |
+|------|---------|
+| **AUT** | SafeRailway (http://saferailway.somee.com) |
+| **Framework** | TestNG + Selenium 4 |
+| **Language** | Java 11+ |
+| **Design Pattern** | Page Object Model (POM) |
+| **Build Tool** | Maven 3.6+ |
+
+---
+
+## Technology Stack
+
+- **Selenium WebDriver 4.27.0** - Browser automation
+- **TestNG 7.12.0** - Test execution framework
+- **Log4j 2.24.3** - Logging
+- **Jackson 2.21.0** - JSON data processing
+- **WebDriverManager 5.9.2** - Browser driver management
+- **Allure 2.33.0** - Test reporting
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   TestCases Layer                        │
+│  (LoginTest, BookTicket, CancelBooking, etc.)            │
+└────────────────┬────────────────────────────────────────┘
+                 │
+┌────────────────▼────────────────────────────────────────┐
+│                PageObjects Layer (POM)                   │
+│  (LoginPage, BookTicketPage, HomePage, etc.)             │
+└────────────────┬────────────────────────────────────────┘
+                 │
+┌────────────────▼────────────────────────────────────────┐
+│                Utilities & Helpers                       │
+│  (FluentWait, WebDriver Setup, Data Utils, Logger)       │
+└────────────────┬────────────────────────────────────────┘
+                 │
+┌────────────────▼────────────────────────────────────────┐
+│              Selenium WebDriver                          │
+│         (Chrome, Firefox via WebDriverManager)           │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
 
 ## Project Structure
 
 ```
 web-railway/
-├── TestCases/Railway/          # Test cases
-├── PageObjects/Railway/        # Page object classes
-├── Helpers/Railway/            # Helper utilities
-├── DataObjects/Railway/        # Data models
-├── Common/                     # Common utilities and constants
-├── Resources/                  # Test data
-├── pom.xml
-├── testng.xml
+├── TestCases/Railway/
+│   ├── LoginTest.java              # Login functionality
+│   ├── LogoutTest.java             # Logout scenarios
+│   ├── CreateAccount.java          # Registration tests
+│   ├── ResetPassword.java          # Password recovery
+│   ├── BookTicket.java             # Ticket booking (data-driven)
+│   ├── CancelBooking.java          # Cancellation flows
+│   └── TestBase.java               # Base test configuration
+│
+├── PageObjects/Railway/
+│   ├── GeneralPage.java            # Base page class
+│   ├── LoginPage.java              # Login & reset password
+│   ├── RegisterPage.java           # Registration form
+│   ├── HomePage.java               # Main navigation
+│   ├── BookTicketPage.java         # Booking interface
+│   ├── MyTicketPage.java           # Ticket management
+│   ├── TimetablePage.java          # Schedule lookup
+│   ├── TicketPricePage.java        # Pricing info
+│   └── FAQPage.java                # FAQ page
+│
+├── Helpers/Railway/
+│   ├── PreconditionHelper.java     # Pre-test setup
+│   └── TableHelper.java            # Table parsing
+│
+├── DataObjects/Railway/
+│   ├── RegisterAccount.java        # User account model
+│   ├── BookTicketData.java         # Booking data model
+│   └── DataObjectBase.java         # Base POJO
+│
+├── Common/
+│   ├── Common/
+│   │   ├── Utilities.java          # FluentWait, WebDriver setup
+│   │   ├── Log4j.java              # Logging wrapper
+│   │   ├── DataProviders.java      # TestNG data providers
+│   │   └── JsonDataReader.java     # JSON test data loader
+│   ├── Constant/
+│   │   ├── Constant.java           # App constants
+│   │   ├── PageMenu.java           # Menu enum
+│   │   ├── FieldsLogin.java        # Login field mapping
+│   │   ├── SeatType.java           # Seat types
+│   │   ├── StationCity.java        # Stations
+│   │   └── TicketTableCol.java     # Table columns
+│
+├── Resources/Railway/
+│   ├── BookTicket.json             # Test data
+│   └── log4j2.xml                  # Log configuration
+│
+├── pom.xml                         # Maven config
+├── testng.xml                      # Test suite definition
 └── README.md
 ```
 
+---
+
 ## Test Coverage
 
-- User authentication (login, logout)
-- Account management (create, reset password)
-- Ticket booking and cancellation
-  ✅ **Comprehensive Logging** - Detailed test execution logs via Log4j  
-  ✅ **Allure Reporting** - Rich, interactive test reports with screenshots  
-  ✅ **Exception Handling** - Robust handling of stale elements and timeouts  
-  ✅ **Reusable Utilities** - Common helpers for setup, data generation, and assertions  
-  ✅ **Type-Safe Constants** - Enums for menus, seat types, stations ensuring code reliability  
-  ✅ **Test Base Class** - Centralized WebDriver initialization & teardown
+| Test Class | Scenarios | Count |
+|-----------|-----------|-------|
+| LoginTest | Valid/invalid login, remember me | 3 |
+| LogoutTest | Logout & session cleanup | 1 |
+| CreateAccount | Registration, validation, duplicates | 3 |
+| ResetPassword | Forgot password, recovery | 2 |
+| BookTicket | Single/round-trip, seat selection, pricing | 8 |
+| CancelBooking | Cancellation, refund | 2 |
+| **Total** | | **19 test cases** |
 
 ---
 
-## 📊 Test Coverage
-
-### Test Cases (6 Classes)
-
-| Test Class        | Test Scenarios                                     | Coverage                                   |
-| ----------------- | -------------------------------------------------- | ------------------------------------------ |
-| **LoginTest**     | Valid login, invalid credentials, remember me      | User authentication                        |
-| **LogoutTest**    | Logout verification, session cleanup               | Session management                         |
-| **CreateAccount** | User registration, email validation, duplicates    | Account management                         |
-| **ResetPassword** | Forgot password flow, new password setup           | Password recovery                          |
-| **BookTicket**    | Single/round-trip booking, seat selection, pricing | Ticket booking (12+ data-driven scenarios) |
-| **CancelBooking** | Ticket cancellation, refund calculation            | Transaction management                     |
-
-**Total Test Cases:** 12+ (with data-driven parameterization)
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- **Java JDK 11** or higher
-- **Maven 3.6+**
-- **git**
+- Java JDK 11+
+- Maven 3.6+
+- Git
 
-### Installation & Setup
+### Setup
 
-1. **Clone the repository**
+```bash
+# Clone repository
+git clone <repository-url>
+cd web-railway
 
-   ```bash
-   git clone <repository-url>
-   cd web-railway
-   ```
+# Install dependencies
+mvn clean install
 
-2. **Install dependencies**
-
-   ```bash
-   mvn clean install
-   ```
-
-3. **Verify setup**
-   ```bash
-   mvn --version
-   java --version
-   ```
+# Verify setup
+mvn --version
+java --version
+```
 
 ---
 
-## 🎯 Running Tests
+## Running Tests
 
-### Run All Tests
-
+### All Tests
 ```bash
 mvn clean test
 ```
 
-### Run Tests with Specific Browser
-
+### Specific Browser
 ```bash
 # Chrome (default)
 mvn clean test -Dbrowser=chrome
@@ -111,12 +168,65 @@ mvn clean test -Dbrowser=chrome
 mvn clean test -Dbrowser=firefox
 ```
 
-### Run Specific Test Class
-
+### Specific Test Class
 ```bash
 mvn clean test -Dtest=Railway.LoginTest
 mvn clean test -Dtest=Railway.BookTicket
+mvn clean test -Dtest=Railway.CancelBooking
 ```
+
+### Single Test Method
+```bash
+mvn clean test -Dtest=Railway.BookTicket#testBookTicketSingleTrip
+```
+
+---
+
+## Reports
+
+### Allure Report
+
+```bash
+# Generate Allure report
+mvn allure:report
+
+# Open report
+mvn allure:serve
+```
+
+### TestNG Report
+
+Generated in `test-output/` directory automatically.
+
+### Logs
+
+View execution logs in `logs/` directory using Log4j configuration.
+
+---
+
+## Key Features
+
+- **POM Design Pattern** - Maintainable and scalable page objects
+- **Explicit Waits (FluentWait)** - Reliable element synchronization
+- **Data-Driven Testing** - JSON-based test data parameterization
+- **Logging** - Detailed execution traces via Log4j
+- **Exception Handling** - Stale element and timeout recovery
+- **Browser Management** - Automatic driver handling (Chrome/Firefox)
+- **Type-Safe Constants** - Enums for menus, seats, stations
+
+---
+
+## Dependencies
+
+See `pom.xml` for complete dependency list.
+
+---
+
+## Notes
+
+- All test data is externalized in `Resources/Railway/BookTicket.json`
+- Screenshots captured on test failure (configured in Log4j)
+- Cross-browser support: Chrome and Firefox
 
 ### Run Specific Test Method
 
